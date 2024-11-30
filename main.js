@@ -164,7 +164,7 @@ function ativarTelaCheia() {
 }
 
 // Chamando as funções
-ativarTelaCheia()
+
 getDeviceInfo();
 getBatteryInfo();
 getLocation();
