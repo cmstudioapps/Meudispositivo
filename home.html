@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Dispositivo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Adicionando rolagem suave */
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Meu Dispositivo</div>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="index.html">Termos de uso</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Descubra tudo sobre seu dispositivo</h1>
+    <p>Informações detalhadas sobre hardware, software e muito mais!</p>
+    <a href="#info-section" class="btn">Ver informações</a>
+  </section>
+
+  <main>
+    <section class="info-section" id="info-section">
+      <h2>Detalhes do Dispositivo</h2>
+      <div class="card" id="device-name">Nome do dispositivo: Obtendo...</div>
+      <div class="card" id="screen-size">Tamanho da tela: Obtendo...</div>
+    </section>
+
+    <section class="info-section">
+      <h2>Bateria</h2>
+      <div class="card" id="battery-status">Bateria: Obtendo...</div>
+      <div class="card" id="battery-time">Tempo estimado de descarga: Calculando...</div>
+    </section>
+
+    <section class="info-section">
+      <h2>Localização</h2>
+      <div class="card" id="location">Localização: Obtendo...</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Meu Dispositivo</p>
+    <div class="social-icons">
+      <span>🌐</span>
+      <span>📧</span>
+      <span>📱</span>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

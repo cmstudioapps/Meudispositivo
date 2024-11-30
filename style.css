@@ -1,0 +1,121 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: black;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  color: cyan;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: pink;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: cyan;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(90deg, cyan, pink);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  background-color: pink;
+  border: 2px solid cyan;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: black;
+  color: cyan;
+}
+
+/* Info Sections */
+.info-section {
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.info-section h2 {
+  color: pink;
+  margin-bottom: 1rem;
+}
+
+.card {
+  margin: 0.5rem auto;
+  padding: 1rem;
+  max-width: 300px;
+  background-color: black;
+  border: 1px solid cyan;
+  color: white;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: black;
+  color: cyan;
+}
+
+footer .social-icons span {
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  color: pink;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+footer .social-icons span:hover {
+  color: cyan;
+}

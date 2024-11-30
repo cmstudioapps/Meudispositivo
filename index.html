@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Uso - Meu Dispositivo</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos para combinar com o design do site */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .terms {
+      padding: 20px;
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color: #00f0f0; /* Ciano */
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      color: #f06595; /* Rosa */
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    a {
+      color: #00f0f0;
+      text-decoration: none;
+    }
+
+    .actions {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn {
+      background-color: #f06595; /* Rosa */
+      color: #fff;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e03e7b;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Termos de Uso</h1>
+  </header>
+
+  <main>
+    <section class="terms">
+      <h2>1. Introdução</h2>
+      <p>
+        Bem-vindo ao <strong>Meu Dispositivo</strong>. Este site foi criado para fornecer informações sobre o dispositivo que você está utilizando, como detalhes do hardware, software, nível de bateria e localização. Ao acessar e usar este site, você concorda com os Termos de Uso descritos abaixo.
+      </p>
+
+      <h2>2. Privacidade e Segurança dos Dados</h2>
+      <h3>2.1 Coleta de Dados</h3>
+      <p>
+        O <strong>Meu Dispositivo</strong> não coleta, armazena ou compartilha qualquer dado fornecido pelo seu dispositivo. Todas as informações exibidas no site (como nome do dispositivo, tamanho da tela, localização e status da bateria) são obtidas diretamente pelo seu navegador no momento do uso. Nenhum dado é enviado ou transmitido para servidores, terceiros ou qualquer outro local.
+      </p>
+
+      <h3>2.2 Localização e Informações Sensíveis</h3>
+      <p>
+        A localização e outras informações exibidas no site são processadas localmente pelo seu navegador. A funcionalidade de localização depende de permissões explícitas concedidas por você. Caso não conceda permissão, essas informações não serão exibidas.
+      </p>
+
+      <h3>2.3 Transparência e Inspeção do Código</h3>
+      <p>
+        Os usuários têm total permissão para inspecionar o código-fonte do site, caso desejem verificar como ele funciona. Você pode usar as ferramentas de desenvolvimento do navegador para acessar e analisar o HTML, CSS e JavaScript utilizados.
+      </p>
+
+      <h2>3. Limitações de Uso</h2>
+      <p>
+        Ao utilizar o site, você concorda em não utilizá-lo de forma que comprometa sua segurança ou a segurança de outros usuários. Você também não deve modificar ou explorar o código do site para finalidades ilícitas ou que possam comprometer sua funcionalidade.
+      </p>
+
+      <h2>4. Isenção de Responsabilidade</h2>
+      <p>
+        O <strong>Meu Dispositivo</strong> não garante a precisão ou completude das informações exibidas. O uso do site é por sua conta e risco. Não nos responsabilizamos por erros ou imprecisões nas informações exibidas nem por quaisquer danos causados pelo uso do site.
+      </p>
+
+      <h2>5. Alterações nos Termos de Uso</h2>
+      <p>
+        Estes Termos de Uso podem ser atualizados periodicamente para refletir mudanças no site ou em suas funcionalidades. Recomendamos revisar os Termos de Uso regularmente.
+      </p>
+
+      <h2>6. Contato</h2>
+      <p>
+        Caso tenha dúvidas sobre os Termos de Uso ou sobre o funcionamento do site, entre em contato pelo e-mail: <a href="mailto:contato@meudispositivo.com">contato@meudispositivo.com</a>.
+      </p>
+    </section>
+
+    <section class="actions">
+      <button id="agree-btn" class="btn">Concordo, permitir e continuar</button>
+    </section>
+  </main>
+
+  
+
+  <script>
+    document.getElementById('agree-btn').addEventListener('click', function() {
+      window.location.href = 'home.html';
+    });
+  </script>
+</body>
+</html>
