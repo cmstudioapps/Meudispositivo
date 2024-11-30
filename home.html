@@ -12,7 +12,7 @@
     }
   </style>
 </head>
-<body onclick="ativarTelaCheia()">
+<body>
   <header>
     <div class="logo">Meu Dispositivo</div>
     <nav>
@@ -29,7 +29,7 @@
     <a href="#info-section" class="btn">Ver informações</a>
   </section>
 
-  <main onclick="ativarTelaCheia()">
+  <main>
 <section class="info-section" id="info-section">
   <h2>Detalhes do Dispositivo</h2>
   <div class="card" id="device-name">Nome do dispositivo: Obtendo...</div>
@@ -72,7 +72,28 @@
       <span>📱</span>
     </div>
   </footer>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
+<script>
+  function mostrarToast() {
+    Toastify({
+      text: "Toque na tela",
+      duration: 3000, // Duração em milissegundos
+      gravity: "bottom", // Posição: "top" ou "bottom"
+      position: "left", // Posição horizontal: "left", "center", "right"
+      style: {
+        background: "white",
+        color: "black"
+      },
+    }).showToast();
+    
+    
+    
+  }
+  
+  mostrarToast()
+</script>
 
   <script src="main.js"></script>
 </body>
