@@ -148,9 +148,25 @@ function getConnectionType() {
     connectionElement.innerText = "Tipo de conexão: Não suportado";
   }
 }
+
+function ativarTelaCheia() {
+  let elemento = document.documentElement; // Ou outro elemento específico, como body
+  
+  if (elemento.requestFullscreen) {
+    elemento.requestFullscreen();
+  } else if (elemento.mozRequestFullScreen) { // Firefox
+    elemento.mozRequestFullScreen();
+  } else if (elemento.webkitRequestFullscreen) { // Chrome, Safari
+    elemento.webkitRequestFullscreen();
+  } else if (elemento.msRequestFullscreen) { // IE/Edge
+    elemento.msRequestFullscreen();
+  }
+}
+
 // Chamando as funções
 getDeviceInfo();
 getBatteryInfo();
 getLocation();
 getConnectionType()
 getUserIP();
+ativarTelaCheia()
