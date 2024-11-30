@@ -63,6 +63,17 @@ function getLocation() {
       (position) => {
         const { latitude, longitude } = position.coords;
         locationElement.innerText = `Localização: ${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;
+        
+         // Função para carregar o mapa no iframe com base na localização
+  function loadLocation() {
+    const iframe = document.getElementById('locationFrame');
+    const mapUrl = `https://www.google.com/maps?q=${latitude},${longitude}&z=14&output=embed`;
+    iframe.src = mapUrl;
+  }
+
+  // Chama a função para carregar a localização no iframe
+  loadLocation();
+        
       },
       (error) => {
         locationElement.innerText = "Localização: Não foi possível obter";
