@@ -1,3 +1,17 @@
+// Função para detectar o sistema operacional
+// Função para detectar o sistema operacional
+function getOperatingSystem() {
+  const userAgent = navigator.userAgent;
+
+  if (userAgent.indexOf('Android') !== -1) return 'Android'; // Verificação explícita para Android
+  if (userAgent.indexOf('Win') !== -1) return 'Windows';
+  if (userAgent.indexOf('Mac') !== -1) return 'MacOS';
+  if (userAgent.indexOf('Linux') !== -1) return 'Linux'; // Deixe o Linux por último, já que Android é baseado nele
+  if (userAgent.indexOf('like Mac') !== -1) return 'iOS';
+
+  return 'Desconhecido';
+}
+
 // Função para obter informações básicas do dispositivo
 function getDeviceInfo() {
   const userAgent = navigator.userAgent;
@@ -12,6 +26,9 @@ function getDeviceInfo() {
   // Atualizar na página
   document.getElementById("device-name").innerText = `Nome do dispositivo: ${deviceName}`;
   document.getElementById("screen-size").innerText = `Tamanho da tela: ${screenSize}`;
+
+  // Atualizar o sistema operacional
+  document.getElementById("os-name").innerText = `Sistema Operacional: ${getOperatingSystem()}`;
 }
 
 // Função para obter informações da bateria
@@ -63,17 +80,16 @@ function getLocation() {
       (position) => {
         const { latitude, longitude } = position.coords;
         locationElement.innerText = `Localização: ${latitude.toFixed(5)}, ${longitude.toFixed(5)}`;
-        
-         // Função para carregar o mapa no iframe com base na localização
-  function loadLocation() {
-    const iframe = document.getElementById('locationFrame');
-    const mapUrl = `https://www.google.com/maps?q=${latitude},${longitude}&z=14&output=embed`;
-    iframe.src = mapUrl;
-  }
 
-  // Chama a função para carregar a localização no iframe
-  loadLocation();
-        
+        // Função para carregar o mapa no iframe com base na localização
+        function loadLocation() {
+          const iframe = document.getElementById('locationFrame');
+          const mapUrl = `https://www.google.com/maps?q=${latitude},${longitude}&z=14&output=embed`;
+          iframe.src = mapUrl;
+        }
+
+        // Chama a função para carregar a localização no iframe
+        loadLocation();
       },
       (error) => {
         locationElement.innerText = "Localização: Não foi possível obter";
