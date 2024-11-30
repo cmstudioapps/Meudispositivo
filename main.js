@@ -161,11 +161,13 @@ function ativarTelaCheia() {
   } else if (elemento.msRequestFullscreen) { // IE/Edge
     elemento.msRequestFullscreen();
   }
+
+getDeviceInfo();
 }
 
 // Chamando as funções
 
-getDeviceInfo();
+
 getBatteryInfo();
 getLocation();
 getConnectionType()
