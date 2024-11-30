@@ -117,9 +117,40 @@ async function getUserIP() {
     console.error("Erro ao obter o IP:", error);
   }
 }
+// Função para obter o tipo de conexão (Wi-Fi ou dados móveis)
+function getConnectionType() {
+  const connectionElement = document.getElementById("connection-type");
 
+  if ('connection' in navigator) {
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const connectionType = connection.effectiveType;
+
+    if (connectionType === 'wifi') {
+      connectionElement.innerText = "Tipo de conexão: Wi-Fi";
+    } else if (connectionType === 'cellular') {
+      connectionElement.innerText = "Tipo de conexão: Dados móveis";
+    } else {
+      connectionElement.innerText = "Tipo de conexão: " + connectionType;
+    }
+
+    // Listener para mudanças na conexão
+    connection.addEventListener('change', () => {
+      const newConnectionType = connection.effectiveType;
+      if (newConnectionType === 'wifi') {
+        connectionElement.innerText = "Tipo de conexão: Wi-Fi";
+      } else if (newConnectionType === 'cellular') {
+        connectionElement.innerText = "Tipo de conexão: Dados móveis";
+      } else {
+        connectionElement.innerText = "Tipo de conexão: " + newConnectionType;
+      }
+    });
+  } else {
+    connectionElement.innerText = "Tipo de conexão: Não suportado";
+  }
+}
 // Chamando as funções
 getDeviceInfo();
 getBatteryInfo();
 getLocation();
+getConnectionType()
 getUserIP();
