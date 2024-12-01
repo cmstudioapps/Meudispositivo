@@ -48,9 +48,11 @@ async function getBatteryInfo() {
     // Estimar tempo de descarga (ou carregamento)
     const calculateDischargeTime = () => {
       if (!battery.charging) {
-        const dischargeRate = battery.dischargingTime > 0 ? battery.dischargingTime / 60 : null; // Em minutos
+        const dischargeRate = battery.dischargingTime > 0 ? battery.dischargingTime / 3600 : null; // Em horas
+        
+        const dischargeRatee = battery.dischargingTime > 0 ? battery.dischargingTime / 60 : null; // Em minutos 
         if (dischargeRate) {
-          batteryTimeElement.innerText = `Tempo estimado de descarga: ${dischargeRate.toFixed(1)} horas`;
+          batteryTimeElement.innerText = `Tempo estimado de descarga: ${dischargeRate.toFixed(0)} horas e ${dischargeRatee.toFixed(0)} minutos`;
         } else {
           batteryTimeElement.innerText = "Tempo estimado de descarga: Não disponível";
         }
@@ -148,26 +150,8 @@ function getConnectionType() {
     connectionElement.innerText = "Tipo de conexão: Não suportado";
   }
 }
-
-function ativarTelaCheia() {
-  let elemento = document.documentElement; // Ou outro elemento específico, como body
-  
-  if (elemento.requestFullscreen) {
-    elemento.requestFullscreen();
-  } else if (elemento.mozRequestFullScreen) { // Firefox
-    elemento.mozRequestFullScreen();
-  } else if (elemento.webkitRequestFullscreen) { // Chrome, Safari
-    elemento.webkitRequestFullscreen();
-  } else if (elemento.msRequestFullscreen) { // IE/Edge
-    elemento.msRequestFullscreen();
-  }
-
-getDeviceInfo();
-}
-
 // Chamando as funções
-
-
+getDeviceInfo();
 getBatteryInfo();
 getLocation();
 getConnectionType()
