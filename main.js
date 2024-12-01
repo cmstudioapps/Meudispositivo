@@ -52,7 +52,7 @@ async function getBatteryInfo() {
         
         const dischargeRatee = battery.dischargingTime > 0 ? battery.dischargingTime / 60 : null; // Em minutos 
         if (dischargeRate) {
-          batteryTimeElement.innerText = `Tempo estimado de descarga: ${dischargeRate.toFixed(0)} horas e ${dischargeRatee.toFixed(0)} minutos`;
+          batteryTimeElement.innerText = `Tempo estimado de descarga: ${dischargeRate.toFixed(0)} horas`;
         } else {
           batteryTimeElement.innerText = "Tempo estimado de descarga: Não disponível";
         }
